@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTARTEX LLC | Global Logistics & Freight Forwarding</title>
+    <style>
+        :root {
+            --primary-blue: #0A2540;
+            --accent-orange: #FF6B00;
+            --light-blue: #1A365D;
+            --text-light: #FFFFFF;
+            --text-gray: #A0AEC0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--primary-blue);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(10, 37, 64, 0.95);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--accent-orange);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--text-light);
+            border-left: 5px solid var(--accent-orange);
+            padding-left: 10px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo-llc {
+            border: 2px solid var(--accent-orange);
+            padding: 2px 6px;
+            font-size: 14px;
+            color: var(--accent-orange);
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-orange);
+        }
+
+        .hero {
+            padding: 180px 5% 100px;
+            text-align: center;
+            background: linear-gradient(180px, var(--light-blue) 0%, var(--primary-blue) 100%);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--text-gray);
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-btn {
+            background-color: var(--accent-orange);
+            color: var(--text-light);
+            padding: 15px 35px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            background-color: #e05e00;
+        }
+
+        .services {
+            padding: 80px 5%;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .services h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-orange);
+            margin: 10px auto 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--light-blue);
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            border-bottom: 4px solid transparent;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--accent-orange);
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: var(--text-gray);
+            font-size: 15px;
+        }
+
+        footer {
+            background-color: #051424;
+            padding: 40px 5%;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-gray);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <div class="logo-icon">A</div>
+            <div class="logo-text">ASTARTEX <span class="logo-llc">LLC</span></div>
+        </div>
+        <nav>
+            <a href="#services">Услуги</a>
+            <a href="#about">О компании</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Global Logistics & Freight Forwarding</h1>
+        <p>Надёжные международные грузоперевозки и комплексные экспедиторские решения для вашего бизнеса. Связываем континенты, гарантируем безопасность.</p>
+        <button class="cta-btn" onclick="document.getElementById('contacts').scrollIntoView({behavior: 'smooth'});">Рассчитать стоимость</button>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Наши направления</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">🚛</div>
+                <h3>ROAD</h3>
+                <p>Автомобильные перевозки грузов любой сложности по СНГ, Европе и Азии.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🚂</div>
+                <h3>RAIL</h3>
+                <p>Надёжная и экономичная доставка железнодорожным транспортом.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🚢</div>
+                <h3>SEA</h3>
+                <p>Морские контейнерные перевозки (FCL/LCL) через ключевые мировые порты.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📦</div>
+                <h3>OTHER</h3>
+                <p>Мультимодальные решения, таможенное оформление и складская логистика.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacts">
+        <p>&copy; 2026 ASTARTEX LLC (შპს ასტარტეკს). Все права защищены.</p>
+        <p style="margin-top: 10px; font-size: 14px;">Тбилиси, Грузия | info@astartex.com</p>
+    </footer>
+
+</body>
+</html>
